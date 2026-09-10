@@ -10,8 +10,11 @@ namespace MUD.Worlds
 
         public void StartGame()
         {
+            Sea s = new Sea();
+            s.ShowGraphic();
             Console.WriteLine("Welcome the magical worlds of MUDs");
             Console.WriteLine("Who are you?");
+            Console.WriteLine("What is your name?");
             Name = Console.ReadLine();
             Console.WriteLine("Oh, your name is " + Name);
             Console.WriteLine("Not what I would have chosen, but it will do I suppose...");
@@ -19,10 +22,13 @@ namespace MUD.Worlds
             Console.WriteLine("You have " + Health + " HP");
             Dead = false;
 
-            if(Dead)
+            if (Dead)
                 Console.WriteLine("You are however, dead?");
             else
                 Console.WriteLine("You are alive? Good!");
+            Console.WriteLine("Do you want to go to the mountain?");
+
+            Console.ReadKey();
         }
     }
 }
