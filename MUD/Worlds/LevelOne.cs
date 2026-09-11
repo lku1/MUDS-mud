@@ -20,15 +20,30 @@ namespace MUD.Worlds
             Console.WriteLine("Not what I would have chosen, but it will do I suppose...");
             Health = 100;
             Console.WriteLine("You have " + Health + " HP");
-            Dead = false;
 
-            if (Dead)
-                Console.WriteLine("You are however, dead?");
-            else
+            Random random = new Random();
+            int num = random.Next(4, 6);
+
+            //Ifall du vill se texten inne sidskripten. Ta bort de första två: //
+            //Console.WriteLine(num); 
+
+
+            if (num <= 4)
+            {
+                Console.ReadKey();
+                Console.WriteLine("");
                 Console.WriteLine("You are alive? Good!");
-            Console.WriteLine("Do you want to go to the mountain?");
+                Console.WriteLine("Do you want to go to the mountain?");
 
-            Console.ReadKey();
+                Console.ReadKey();
+            }
+
+
+            else
+                Console.ReadKey();
+            Console.WriteLine("");
+            Console.WriteLine("You are however, dead?");
+
         }
     }
 }
