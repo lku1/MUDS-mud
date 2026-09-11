@@ -34,7 +34,6 @@ namespace MUD.Worlds
                 Console.WriteLine("");
                 Console.WriteLine("You are alive? Good!");
                 Console.WriteLine("Do you want to go to the mountain?");
-
                 Console.ReadKey();
             }
 
