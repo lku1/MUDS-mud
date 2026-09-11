@@ -25,7 +25,7 @@ namespace MUD.Worlds
             int num = random.Next(1, 7);
 
             //Ifall du vill se texten inne sidskripten. Ta bort de första två: //
-            Console.WriteLine(num); 
+            //Console.WriteLine(num); 
 
 
             if (num <= 4)
