@@ -22,10 +22,10 @@ namespace MUD.Worlds
             Console.WriteLine("You have " + Health + " HP");
 
             Random random = new Random();
-            int num = random.Next(4, 6);
+            int num = random.Next(1, 7);
 
             //Ifall du vill se texten inne sidskripten. Ta bort de första två: //
-            //Console.WriteLine(num); 
+            Console.WriteLine(num); 
 
 
             if (num <= 4)
@@ -40,9 +40,12 @@ namespace MUD.Worlds
 
 
             else
+            {
                 Console.ReadKey();
             Console.WriteLine("");
             Console.WriteLine("You are however, dead?");
+                Console.ReadKey();
+            }
 
         }
     }
