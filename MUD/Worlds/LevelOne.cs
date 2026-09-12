@@ -5,6 +5,8 @@ namespace MUD.Worlds
     public class LevelOne
     {
         public string Name;
+        public string age;
+        public string CharacterClass;
         public int Health;
         public bool Dead;
 
@@ -16,9 +18,16 @@ namespace MUD.Worlds
             Console.WriteLine("Who are you?");
             Console.WriteLine("What is your name?");
             Name = Console.ReadLine();
-            Console.WriteLine("Oh, your name is " + Name);
-            Console.WriteLine("Not what I would have chosen, but it will do I suppose...");
-            Health = 100;
+            Console.WriteLine("What is your age?");
+            age = Console.ReadLine();
+            Console.WriteLine("What is your CharacterClass?");
+            CharacterClass = Console.ReadLine();
+            Console.Clear();
+            s = new Sea();
+            s.ShowGraphic();
+            Console.WriteLine("Welcome " + Name);
+            Console.WriteLine("You are a " + age + " year old " + CharacterClass + ".");
+            Health = 10;
             Console.WriteLine("You have " + Health + " HP");
 
             Random random = new Random();
@@ -26,7 +35,6 @@ namespace MUD.Worlds
 
             //Ifall du vill se texten inne sidskripten. Ta bort de första två: //
             //Console.WriteLine(num); 
-
 
             if (num <= 4)
             {
@@ -37,12 +45,11 @@ namespace MUD.Worlds
                 Console.ReadKey();
             }
 
-
             else
             {
                 Console.ReadKey();
-            Console.WriteLine("");
-            Console.WriteLine("You are however, dead?");
+                Console.WriteLine("");
+                Console.WriteLine("You are however, dead?");
                 Console.ReadKey();
             }
 
