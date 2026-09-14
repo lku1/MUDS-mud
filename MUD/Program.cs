@@ -6,7 +6,7 @@ namespace MUD
     {
         static void Main(string[] args)
         {
-            LevelOne one = new LevelOne(); 
+            Sunset one = new Sunset();
             one.StartGame();
         }
     }
