@@ -1,55 +1,38 @@
 ﻿using MUD.Art;
 using MUD.CCharacter;
-using System.Xml.Linq;
 
 namespace MUD.Worlds
 {
     public class Sunset
     {
-        public string Name;
-        public int age;
-        public string CharacterClass;
-        public int Health;
-        public int Strength;
-        public int Gold;
-        public bool Dead;
+        public CCharacter1 Player;
 
         public void StartGame()
         {
             Sea s = new Sea();
+            Player = new CCharacter1();
+
             s.ShowGraphic();
-            Console.WriteLine("Welcome the magical worlds of MUDs");
-            Console.WriteLine("Who are you?");
-            Console.WriteLine("What is your name?");
-            Name = Console.ReadLine();
-            Console.WriteLine("What is your age?");
-            age = int.Parse(Console.ReadLine());
+            Console.WriteLine("Welcome the magical worlds of MUDs \nWho are you? \nWhat is your Name?");
+            Player.Name = Console.ReadLine();
+            Console.WriteLine("What is your Age?");
+            Player.Age = int.Parse(Console.ReadLine());
             //Console.WriteLine("What is your CharacterClass?");
-            CharacterClass = "Warrior";
+            Player.CharacterClass = "Warrior";
             Console.Clear();
-            s = new Sea();
+
             s.ShowGraphic();
             //Console.WriteLine("What is your HP?"); int.Parse(Console.ReadLine());
-            Health = 10;
+            Player.Health = 10;
             //Console.WriteLine("What is your Strength?");
-            Strength = 7;
+            Player.Strength = 7;
             //Console.WriteLine("What is your Gold?");
-            Gold = 5;
+            Player.Gold = 5;
             Console.Clear();
-            s = new Sea();
+
+
             s.ShowGraphic();
-            //CCharacter1 cc = new CCharacter1();
-            //cc.Character();
-            Console.WriteLine("character:");
-            Console.WriteLine("your name: " + Name);
-            Console.WriteLine("year old: " + age);
-            Console.WriteLine("Your class: " + CharacterClass);
-            Console.WriteLine("You have HP: " + Health);
-            Console.WriteLine("You have Strength: " + Strength);
-            Console.WriteLine("You have Gold: " + Gold);
-            //Console.WriteLine("");
-            //Console.WriteLine("If you want to see your character, please type character.");
-            Console.WriteLine("------------------------------------------------------------------------");
+            Player.Yous();
             Console.ReadLine();
             Console.Clear();
 
@@ -61,14 +44,12 @@ namespace MUD.Worlds
 
             if (num <= 4)
             {
-                s = new Sea();
                 s.ShowGraphic();
                 Console.WriteLine("You are alive? Good!");
                 Console.WriteLine("Do you want to go to the mountain?");
                 Console.WriteLine("------------------------------------------------------------------------");
                 Console.ReadLine();
             }
-
             else
             {
                 Console.WriteLine("You are however, dead?");
