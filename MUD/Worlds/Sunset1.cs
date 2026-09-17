@@ -7,7 +7,6 @@ namespace MUD.Worlds
     public class Sunset1
     {
         private string input;
-        private string input1;
 
         public void StartGame()
         {
@@ -27,43 +26,25 @@ namespace MUD.Worlds
             Console.Clear();
 
             s.ShowGraphic();
-            Console.WriteLine("What is your CharacterClass? \nWarrior \nDexterity1 \nMagic1");
-            pp.CharacterClass = Console.ReadLine().ToLower().Trim();
-            //pp.CharacterClass = "Magic1";
-            if (input1 == "Warrior")
-            {
-                pp.Warrior();
-                Console.ReadLine();
-                Console.Clear();
-            }
-            else if (input1 == "Dexterity1")
-            {
-                pp.Dexterity1();
-                Console.ReadLine();
-                Console.Clear();
-            }
-            else if (input1 == "Magic1")
-            {
-                pp.Magic1();
-                Console.ReadLine();
-                Console.Clear();
-            }
-            else
-            {
-                Console.WriteLine("Invalid input. Please choose a valid character class.");
-                StartGame(); // Restart the game if invalid input
-                return;
-            }
+            pp.CharacterClass = "Warrior";
+
+            pp.Warrior();
+            Console.ReadLine();
+            Console.Clear();
+
 
             Random random = new Random();
-            int num = random.Next(1, 4);
+            int num = random.Next(1, 7);
             //Ifall du vill se texten inne sidskripten. Ta bort de första två: //
             //Console.WriteLine(num);
             if (num <= 4)
             {
                 s.ShowGraphic();
-                Console.WriteLine("You are alive? Good!");
-                Console.WriteLine("Do you want to go to the mountain?");
+                Console.WriteLine("Du står på toppen av en klippkant.");
+                Console.WriteLine("Och du blickar ut över det vackra havet.");
+                Console.WriteLine("Och när du tittar bakom dig kan du se bergen.");
+                Console.WriteLine("och där nere borde det finnas en stuga som du är menad att bo i en kort tid.");
+                Console.WriteLine("\nDo you want to go to the mountain?");
                 Console.WriteLine("------------------------------------------------------------------------");
                 input = Console.ReadLine().ToLower().Trim();
 
@@ -71,21 +52,30 @@ namespace MUD.Worlds
                 {
                     Console.WriteLine("Du börjar lämna klippan och gå över till berget, genom att gå igenom skogen.");
                     Console.ReadKey();
-                    forest.Forest(pp);
+                    forest.Forest(pp, it);
                 }
                 else
                 {
                     Console.Clear();
-                    Console.WriteLine("You are however, dead?");
-                    Console.WriteLine("exit");
+                    s.ShowGraphic();
+                    Console.WriteLine("Eftersom du inte gjorde något slags val stod du där och undrade vad du skulle göra härnäst.");
+                    Console.WriteLine("och tittade ut på det vackra havet från den klippan du stod på. ");
+                    Console.ReadKey();
+                    Console.WriteLine("\nNär plötsligt klippan du står på brast sönder och du börjar falla mot din död.");
+                    Console.ReadKey();
+                    Console.WriteLine("The End");
                     Console.ReadKey();
                     Environment.Exit(0);
                 }
             }
             else
             {
-                Console.WriteLine("You are however, dead?");
-                Console.WriteLine("exit");
+                Console.Clear();
+                s.ShowGraphic();
+                Console.WriteLine("På ett konstigt sätt och genom ödets vändning.");
+                Console.WriteLine("Stenen du stod på sprack plötsligt sönder och du börjar falla mot din död.");
+                Console.ReadKey();
+                Console.WriteLine("The End");
                 Console.ReadKey();
                 Environment.Exit(0);
             }
