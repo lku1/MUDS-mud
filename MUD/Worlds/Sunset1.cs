@@ -7,7 +7,7 @@ namespace MUD.Worlds
     public class Sunset1
     {
         private string input;
-
+        private string input1;
 
         public void StartGame()
         {
@@ -23,14 +23,37 @@ namespace MUD.Worlds
             Console.WriteLine("What is your Age?");
             //pp.Age = int.Parse(Console.ReadLine());
             pp.Age = 18;
-            //Console.WriteLine("What is your CharacterClass?");
-            pp.CharacterClass = "Warrior";
+
             Console.Clear();
 
             s.ShowGraphic();
-            pp.Warrior();
-            Console.ReadLine();
-            Console.Clear();
+            Console.WriteLine("What is your CharacterClass? \nWarrior \nDexterity1 \nMagic1");
+            pp.CharacterClass = Console.ReadLine().ToLower().Trim();
+            //pp.CharacterClass = "Magic1";
+            if (input1 == "Warrior")
+            {
+                pp.Warrior();
+                Console.ReadLine();
+                Console.Clear();
+            }
+            else if (input1 == "Dexterity1")
+            {
+                pp.Dexterity1();
+                Console.ReadLine();
+                Console.Clear();
+            }
+            else if (input1 == "Magic1")
+            {
+                pp.Magic1();
+                Console.ReadLine();
+                Console.Clear();
+            }
+            else
+            {
+                Console.WriteLine("Invalid input. Please choose a valid character class.");
+                StartGame(); // Restart the game if invalid input
+                return;
+            }
 
             Random random = new Random();
             int num = random.Next(1, 4);
@@ -48,7 +71,7 @@ namespace MUD.Worlds
                 {
                     Console.WriteLine("Du börjar lämna klippan och gå över till berget, genom att gå igenom skogen.");
                     Console.ReadKey();
-                    forest.Forest();
+                    forest.Forest(pp);
                 }
                 else
                 {
@@ -66,9 +89,6 @@ namespace MUD.Worlds
                 Console.ReadKey();
                 Environment.Exit(0);
             }
-
         }
-
     }
-
 }

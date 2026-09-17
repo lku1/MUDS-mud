@@ -18,11 +18,10 @@ namespace MUD.CCharacter
         //public bool Dead;
         public void Warrior()
         {
-            IItems1 it = new IItems1();
             Level = 1;
             Health = 30;
             Strength = 5;
-            Magic = 2;
+            Magic = 3;
             Dexterity = 3;
             Gold = 10;
             Items = "Sword, Shield";
@@ -37,12 +36,58 @@ namespace MUD.CCharacter
             Console.WriteLine("You have Strength: " + Strength + " \nYou have magic: " + Magic + " \nYou have dexterity: " + Dexterity);
             Console.WriteLine("You have Gold: " + Gold);
             Console.WriteLine("You have the items: " + Items);
-            Console.WriteLine("\nIf you want to see your character, please type Character.");
+            //Console.WriteLine("\nIf you want to see your character, please type Character.");
             Console.WriteLine("------------------------------------------------------------------------");
         }
+        public void Dexterity1()
+        {
+            Level = 1;
+            Health = 30;
+            Strength = 3;
+            Magic = 3;
+            Dexterity = 5;
+            Gold = 10;
+            Items = "Sword, Shield";
+            Console.WriteLine("========================================");
+            Console.WriteLine("              Character                 ");
+            Console.WriteLine("========================================");
+            Console.WriteLine("your name: " + Name);
+            Console.WriteLine("year Age: " + Age);
+            Console.WriteLine("your level is: " + Level);
+            Console.WriteLine("Your class: " + CharacterClass);
+            Console.WriteLine("You have HP: " + Health);
+            Console.WriteLine("You have Strength: " + Strength + " \nYou have magic: " + Magic + " \nYou have dexterity: " + Dexterity);
+            Console.WriteLine("You have Gold: " + Gold);
+            Console.WriteLine("You have the items: " + Items);
+            //Console.WriteLine("\nIf you want to see your character, please type Character.");
+            Console.WriteLine("------------------------------------------------------------------------");
+        }
+        public void Magic1()
+        {
+            Level = 1;
+            Health = 30;
+            Strength = 3;
+            Magic = 5;
+            Dexterity = 3;
+            Gold = 10;
+            Items = "Sword, Shield";
+            Console.WriteLine("========================================");
+            Console.WriteLine("              Character                 ");
+            Console.WriteLine("========================================");
+            Console.WriteLine("your name: " + Name);
+            Console.WriteLine("year Age: " + Age);
+            Console.WriteLine("your level is: " + Level);
+            Console.WriteLine("Your class: " + CharacterClass);
+            Console.WriteLine("You have HP: " + Health);
+            Console.WriteLine("You have Strength: " + Strength + " \nYou have magic: " + Magic + " \nYou have dexterity: " + Dexterity);
+            Console.WriteLine("You have Gold: " + Gold);
+            Console.WriteLine("You have the items: " + Items);
+            //Console.WriteLine("\nIf you want to see your character, please type Character.");
+            Console.WriteLine("------------------------------------------------------------------------");
+        }
+
         public void CharacterSheets()
         {
-            IItems1 it = new IItems1();
             Console.WriteLine("========================================");
             Console.WriteLine("              Character                 ");
             Console.WriteLine("========================================");
@@ -51,7 +96,7 @@ namespace MUD.CCharacter
             Console.WriteLine("Level: " + Level);
             Console.WriteLine("class: " + CharacterClass);
             Console.WriteLine("HP: " + Health);
-            Console.WriteLine("Strength: " + Strength + "magic: " + Magic + "dexterity: " + Dexterity);
+            Console.WriteLine("Strength: " + Strength + " magic: " + Magic + " dexterity: " + Dexterity);
             Console.WriteLine("Gold: " + Gold);
             Console.WriteLine("Items: " + Items);
             Console.WriteLine("------------------------------------------------------------------------");

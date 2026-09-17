@@ -6,16 +6,14 @@ namespace MUD.IItems
     {
         public int sword;
         public int shield;
-        public void Sword()
+        public void Sword(CCharacter1 pp)
         {
-            CCharacter1 pp = new CCharacter1();
             Console.WriteLine("Sword damage: " + sword);
             sword = 3;
             sword = sword + pp.Strength;
         }
-        public void Shield()
+        public void Shield(CCharacter1 pp)
         {
-            CCharacter1 pp = new CCharacter1();
             Console.WriteLine("Shield Protect: " + shield);
             shield = 4;
             shield = shield + pp.Strength;
