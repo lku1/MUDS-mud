@@ -110,7 +110,7 @@ namespace MUD.Worlds
             Console.WriteLine($"You wake up refreshed the next morning! Your HP has been restored to {pp.Health}.");
             Console.WriteLine("You stretch your arms and begin to eat some breakfast. Afterward you go outside to look at the (Dungeon).");
             Console.ReadKey();
-            Console.WriteLine("The dungeon gate is a bit smaller than you thought it's supposed to be,");
+            Console.WriteLine("\nThe dungeon gate is a bit smaller than you thought it's supposed to be,");
             Console.WriteLine("but still you begin to walk inside and you find out it's more like a cave system.");
             Console.ReadKey();
 
