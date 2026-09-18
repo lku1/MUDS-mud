@@ -9,6 +9,7 @@ namespace MUD.CCharacter
         public int Level;
         public string CharacterClass;
         public int Health;
+        public int MaxHealth = 30;
         public int Strength;
         public int Magic;
         public int Dexterity;
