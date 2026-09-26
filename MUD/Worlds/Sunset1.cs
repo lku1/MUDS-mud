@@ -1,5 +1,4 @@
-﻿using DocumentFormat.OpenXml.Spreadsheet;
-using MUD.Art;
+﻿using MUD.Art;
 using MUD.CCharacter;
 using MUD.IItems;
 
@@ -70,7 +69,7 @@ namespace MUD.Worlds
 
 
             Random random = new Random();
-            int num = random.Next(1, 7);
+            int num = random.Next(1, 4);
             //Ifall du vill se texten inne sidskripten. Ta bort de första två: //
             //Console.WriteLine(num);
             if (num <= 4)
@@ -86,7 +85,7 @@ namespace MUD.Worlds
                 Console.WriteLine("------------------------------------------------------------------------");
                 input = Console.ReadLine().ToLower().Trim();
 
-                if (input == "mountain")
+                if (input == "mountain" || input == "1")
                 {
                     Console.WriteLine("When your decision has been made to go to the cabin, you begin" +
                         "\nto turn around and leave the cliff's edge and walk into the forest.");

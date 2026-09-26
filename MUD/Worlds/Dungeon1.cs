@@ -98,7 +98,7 @@ namespace MUD.Worlds
                     Console.ReadKey();
                 }
 
-                StartCombat(player, currentEnemy);
+                SStartCombat1(player, currentEnemy);
             }
 
             Console.Clear();
@@ -134,7 +134,7 @@ namespace MUD.Worlds
             Environment.Exit(0);
         }
 
-        private void StartCombat(CCharacter1 player, Enemy1 enemy)
+        private void SStartCombat1(CCharacter1 player, Enemy1 enemy)
         {
             Random combatDice = new Random();
 

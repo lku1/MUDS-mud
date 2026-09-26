@@ -14,11 +14,11 @@ namespace MUD.Worlds
 
             if (player.Level == 1 && enemiesDefeated >= 2)
             {
-                LevelUp(player);
+                LevelUp1(player);
             }
         }
 
-        private void LevelUp(CCharacter1 player)
+        private void LevelUp1(CCharacter1 player)
         {
             player.Level = 2;
             player.MaxHealth += 5;
