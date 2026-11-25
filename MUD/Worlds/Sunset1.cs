@@ -18,7 +18,21 @@ namespace MUD.Worlds
             s.ShowGraphic();
             Console.WriteLine("Welcome to the magical world of \"MUDs\" " +
                 "\nWhat is your Name?");
-            pp.Name = Console.ReadLine();
+            while (true)
+            {
+                string nameInput = Console.ReadLine();
+
+                if (!string.IsNullOrWhiteSpace(nameInput))
+                {
+                    pp.Name = nameInput.Trim();
+                    break;                      
+                }
+                else
+                {
+                    Console.WriteLine("You cannot enter the world without a name! Please type your Name:");
+                }
+            }
+
             //pp.Name = "lku";
             Console.WriteLine("What is your Age?");
             //pp.Age = int.Parse(Console.ReadLine());
@@ -81,7 +95,7 @@ namespace MUD.Worlds
                 Console.ReadKey();
                 Console.WriteLine("\nAnd when you look behind you, you can see the mountains.");
                 Console.WriteLine("And down there in the forest, there should be a cabin that you are meant to live in for a short time.");
-                Console.WriteLine("\nDo you want to go to the mountain?");
+                Console.WriteLine("\n1: Do you want to go to the mountain?");
                 Console.WriteLine("------------------------------------------------------------------------");
                 input = Console.ReadLine().ToLower().Trim();
 
